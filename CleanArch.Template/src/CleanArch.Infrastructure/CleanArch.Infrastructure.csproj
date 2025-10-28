@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+	<ItemGroup>
+	  <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" />
+	  <PackageReference Include="Microsoft.Extensions.Logging" />
+	  <PackageReference Include="SQLite" />
+	</ItemGroup>
   
 	<ItemGroup>
 	  <ProjectReference Include="..\CleanArch.Core\CleanArch.Core.csproj" />

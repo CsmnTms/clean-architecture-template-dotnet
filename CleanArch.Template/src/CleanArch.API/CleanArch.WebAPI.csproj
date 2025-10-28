@@ -9,6 +9,10 @@
   </PropertyGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Serilog.AspNetCore" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <ProjectReference Include="..\CleanArch.Core\CleanArch.Core.csproj" />
 	  <ProjectReference Include="..\CleanArch.Infrastructure\CleanArch.Infrastructure.csproj" />
 	  <ProjectReference Include="..\CleanArch.UseCases\CleanArch.UseCases.csproj" />
