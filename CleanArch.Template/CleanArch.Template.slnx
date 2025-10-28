@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/CleanArch.API/CleanArch.WebAPI.csproj" />
+    <Project Path="src/CleanArch.Core/CleanArch.Core.csproj" />
+    <Project Path="src/CleanArch.Infrastructure/CleanArch.Infrastructure.csproj" />
+    <Project Path="src/CleanArch.UseCases/CleanArch.UseCases.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CleanArch.FunctionalTests/CleanArch.FunctionalTests.csproj" Id="c712cf57-516f-468b-9bc1-e3cbd78cc04d" />
+    <Project Path="tests/CleanArch.IntegrationTests/CleanArch.IntegrationTests.csproj" Id="a78485e5-2e85-47da-a938-d02a66690632" />
+    <Project Path="tests/CleanArch.UnitTests/CleanArch.UnitTests.csproj" Id="c3d808c3-6987-40d7-bee8-33b997f088cd" />
+  </Folder>
+</Solution>

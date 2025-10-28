@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--<Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />--> <!--TODO_research: why was this here in other projects but not in UseCases?-->
+  
+	<ItemGroup>
+	  <ProjectReference Include="..\CleanArch.Core\CleanArch.Core.csproj" />
+	</ItemGroup>
+
+</Project>
