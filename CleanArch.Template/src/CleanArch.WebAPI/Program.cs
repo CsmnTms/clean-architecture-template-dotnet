@@ -1,5 +1,5 @@
 ﻿using CleanArch.WebAPI.Configurations;
-using CleanArch.ServiceDefaults;
+using Common.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,4 +1,4 @@
-﻿using CleanArch.Core.Entities;
+﻿using CleanArch.Core.Cow;
 
 namespace CleanArch.Infrastructure.Data.Config;
 

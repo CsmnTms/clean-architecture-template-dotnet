@@ -5,13 +5,14 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/CleanArch.API/CleanArch.WebAPI.csproj" />
+    <Project Path="src/CleanArch.WebAPI/CleanArch.WebAPI.csproj" />
     <Project Path="src/CleanArch.Core/CleanArch.Core.csproj" />
     <Project Path="src/CleanArch.Infrastructure/CleanArch.Infrastructure.csproj" />
     <Project Path="src/CleanArch.UseCases/CleanArch.UseCases.csproj" />
   </Folder>
   <Folder Name="/src/common/">
-    <Project Path="src/CleanArch.ServiceDefaults/Common.ServiceDefaults.csproj" Id="6702f129-c42e-4520-a36e-d46f05cc1e88" />
+    <Project Path="src/common/Common.SharedKernel/Common.SharedKernel.csproj" Id="944aca51-95b2-496c-99c2-4aad5d1a4d9e" />
+    <Project Path="src/common/Common.ServiceDefaults/Common.ServiceDefaults.csproj" Id="6702f129-c42e-4520-a36e-d46f05cc1e88" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/CleanArch.FunctionalTests/CleanArch.FunctionalTests.csproj" Id="c712cf57-516f-468b-9bc1-e3cbd78cc04d" />

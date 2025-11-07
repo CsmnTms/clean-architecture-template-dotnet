@@ -1,4 +1,4 @@
-﻿using CleanArch.Infrastructure.Data.RepositoryAbstractions;
+﻿using Common.SharedKernel;
 
 namespace CleanArch.Infrastructure.Data;
 

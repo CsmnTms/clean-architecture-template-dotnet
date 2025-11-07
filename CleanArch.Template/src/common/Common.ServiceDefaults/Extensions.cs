@@ -9,7 +9,7 @@ using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 
-namespace CleanArch.ServiceDefaults; // namespace Microsoft.Extensions.Hosting; on the ardalis template the namespace is like this <-, i wonder why
+namespace Common.ServiceDefaults; // namespace Microsoft.Extensions.Hosting; on the ardalis template the namespace is like this <-, i wonder why
 
 // Adds common .NET Aspire services: service discovery, resilience, health checks, and OpenTelemetry.
 // This project should be referenced by each service project in your solution.

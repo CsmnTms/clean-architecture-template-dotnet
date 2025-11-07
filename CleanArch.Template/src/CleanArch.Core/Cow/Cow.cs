@@ -1,6 +1,6 @@
 ﻿using CleanArch.Core.Enums;
 
-namespace CleanArch.Core.Entities;
+namespace CleanArch.Core.Cow;
 
 public class Cow
 {
@@ -12,4 +12,5 @@ public class Cow
     public int TotalMilkCount { get; set; }
     public decimal TotalMilkQuantityLiters { get; set; }
     //public int Age => DateTime.Now.Year - DateOfBirth.Year;
+    //public string Breed { get; init; }
 }

@@ -1,5 +1,5 @@
 ﻿using CleanArch.Infrastructure.Data;
-using CleanArch.Infrastructure.Data.RepositoryAbstractions;
+using Common.SharedKernel;
 
 namespace CleanArch.Infrastructure;
 
@@ -10,10 +10,18 @@ public static class InfrastructureServiceExtensions
         ConfigurationManager config,
         ILogger logger)
     {
-        string? connectionString = config.GetConnectionString("SqliteConnection");
+        //string? connectionString = config.GetConnectionString("SqliteConnection");
+        string? connectionString = config.GetConnectionString("SqlServerConnection");
         //Guard.Against.Null(connectionString);
 
-        services.AddDbContext<CowDbContext>(options => options.UseSqlite(connectionString));
+        services.AddDbContext<CowDbContext>(options =>
+        {
+            options.UseSqlServer(connectionString, sql =>
+            {
+                sql.MigrationsAssembly(typeof(CowDbContext).Assembly.FullName); // TODO_research 
+                sql.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10), errorNumbersToAdd: null); // TODO_research
+            });
+        });
 
         services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
                 .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>)); 
