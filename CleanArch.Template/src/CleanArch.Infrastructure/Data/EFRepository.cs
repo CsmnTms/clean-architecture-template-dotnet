@@ -1,9 +1,9 @@
-﻿using CleanArch.Infrastructure.Data.SharedKernel;
+﻿using CleanArch.Infrastructure.Data.RepositoryAbstractions;
 
 namespace CleanArch.Infrastructure.Data;
 
 // inherit from Ardalis.Specification type
-public class EfRepository<T>(AppDbContext dbContext) :
+public class EfRepository<T>(CowDbContext dbContext) :
     RepositoryBase<T>(dbContext), IReadRepository<T>, IRepository<T> where T : class//, IAggregateRoot
 {
 }

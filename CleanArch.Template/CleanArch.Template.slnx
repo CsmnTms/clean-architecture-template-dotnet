@@ -10,6 +10,9 @@
     <Project Path="src/CleanArch.Infrastructure/CleanArch.Infrastructure.csproj" />
     <Project Path="src/CleanArch.UseCases/CleanArch.UseCases.csproj" />
   </Folder>
+  <Folder Name="/src/common/">
+    <Project Path="src/CleanArch.ServiceDefaults/Common.ServiceDefaults.csproj" Id="6702f129-c42e-4520-a36e-d46f05cc1e88" />
+  </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/CleanArch.FunctionalTests/CleanArch.FunctionalTests.csproj" Id="c712cf57-516f-468b-9bc1-e3cbd78cc04d" />
     <Project Path="tests/CleanArch.IntegrationTests/CleanArch.IntegrationTests.csproj" Id="a78485e5-2e85-47da-a938-d02a66690632" />

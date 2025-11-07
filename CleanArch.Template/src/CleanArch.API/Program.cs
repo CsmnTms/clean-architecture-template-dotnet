@@ -1,4 +1,5 @@
 ﻿using CleanArch.WebAPI.Configurations;
+using CleanArch.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,15 @@ builder.AddLoggerConfigs();
 var appLogger = new SerilogLoggerFactory(logger)
     .CreateLogger<Program>();
 
+builder.Services.AddOptionConfigs(builder.Configuration, appLogger, builder);
+builder.Services.AddServiceConfigs(appLogger, builder);
+
+builder.AddServiceDefaults();
+
 var app = builder.Build();
+
+//await app.UseAppMiddlewareAndSeedDatabase();
 
 app.Run();
 
-public partial class Program { } // Needs to be made public so integration tests can access it
+public partial class Program { } // Public so integration tests can access it

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using CleanArch.Core.ToDoListAggregate;
+﻿using System.Reflection;
+using CleanArch.Core.Entities;
 
 namespace CleanArch.Infrastructure.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class CowDbContext(DbContextOptions<CowDbContext> options) : DbContext(options)
 {
-    public DbSet<ToDoList> ToDoLists => Set<ToDoList>();
+    public DbSet<Cow> Cows => Set<Cow>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

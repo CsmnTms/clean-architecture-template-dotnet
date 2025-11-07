@@ -1,16 +1,16 @@
-﻿using CleanArch.Core.ToDoListAggregate;
+﻿using CleanArch.Core.Entities;
 
 namespace CleanArch.Infrastructure.Data.Config;
 
 // TODO_research: how / when is this run?
-public class ToDoListConfiguration : IEntityTypeConfiguration<ToDoList>
+public class CowConfiguration : IEntityTypeConfiguration<Cow>
 {
-    public void Configure(EntityTypeBuilder<ToDoList> builder)
+    public void Configure(EntityTypeBuilder<Cow> builder)
     {
         builder.Property(p => p.Name)
             .HasMaxLength(DataSchemaConstants.DEFAULT_NAME_LENGTH)
             .IsRequired();
 
-        builder.OwnsMany(builder => builder.Items);
+        //builder.OwnsMany(builder => builder.Items);
     }
 }

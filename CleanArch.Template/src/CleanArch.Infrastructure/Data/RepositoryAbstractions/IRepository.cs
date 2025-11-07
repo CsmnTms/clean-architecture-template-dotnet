@@ -1,6 +1,7 @@
 ﻿using Ardalis.Specification;
 
-namespace CleanArch.Infrastructure.Data.SharedKernel;
+// this can go in a shared kernel deployed in nuget later
+namespace CleanArch.Infrastructure.Data.RepositoryAbstractions;
 
 /// <summary>
 /// An abstraction for persistence, based on Ardalis.Specification
