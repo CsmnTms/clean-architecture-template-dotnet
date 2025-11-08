@@ -1,8 +1,8 @@
 ﻿using CleanArch.Core.shared.enums;
 
-namespace CleanArch.Core.Cow;
+namespace CleanArch.Core.Goat;
 
-public class Cow
+public class Goat
 {
     public int Id { get; set; }
     public required string Name { get; set; } // TODO_research: explore the required keyword
@@ -11,6 +11,4 @@ public class Cow
     public string LastRecordedLocation { get; set; }
     public int TotalMilkCount { get; set; }
     public decimal TotalMilkQuantityLiters { get; set; }
-    //public int Age => DateTime.Now.Year - DateOfBirth.Year;
-    //public string Breed { get; init; }
 }

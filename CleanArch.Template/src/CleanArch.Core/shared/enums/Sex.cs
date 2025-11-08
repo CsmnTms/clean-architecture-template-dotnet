@@ -1,4 +1,4 @@
-﻿namespace CleanArch.Core.Enums;
+﻿namespace CleanArch.Core.shared.enums;
 
 public enum Sex
 {

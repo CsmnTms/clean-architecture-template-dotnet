@@ -1,4 +1,5 @@
 ﻿using CleanArch.Infrastructure;
+using CleanArch.UseCases.Cows;
 
 namespace CleanArch.WebAPI.Configurations;
 
@@ -7,8 +8,9 @@ public static class ServiceConfigs
     public static IServiceCollection AddServiceConfigs(this IServiceCollection services, Microsoft.Extensions.Logging.ILogger logger, WebApplicationBuilder builder)
     {
         services.AddInfrastructureServices(builder.Configuration, logger);
-            //.AddMediatrConfigs();
+        //.AddMediatrConfigs();
 
+        services.AddScoped<ICowService, CowService>();
 
         //if (builder.Environment.IsDevelopment())
         //{

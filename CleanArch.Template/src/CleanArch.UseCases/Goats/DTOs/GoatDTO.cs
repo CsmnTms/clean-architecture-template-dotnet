@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CleanArch.Core.shared.enums;
+﻿using CleanArch.Core.shared.enums;
 
-namespace CleanArch.UseCases.Cows.DTOs;
+namespace CleanArch.UseCases.Goats.DTOs;
 
-public record CowDTO
+public class GoatDTO
 {
     public int Id { get; set; }
-    public required string Name { get; init; } // TODO_research: explore the required keyword
+    public required string Name { get; init; }
     public DateTime DateOfBirth { get; init; }
     public Sex Sex { get; init; }
     public required string LastRecordedLocation { get; init; }

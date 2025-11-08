@@ -15,12 +15,25 @@ builder.AddLoggerConfigs();
 var appLogger = new SerilogLoggerFactory(logger)
     .CreateLogger<Program>();
 
+builder.Services.AddControllers();
+
+// Register OpenAPI (new .NET built-in)
+builder.Services.AddOpenApi();
+
 builder.Services.AddOptionConfigs(builder.Configuration, appLogger, builder);
 builder.Services.AddServiceConfigs(appLogger, builder);
 
 builder.AddServiceDefaults();
 
 var app = builder.Build();
+
+app.MapControllers();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi(); // => /openapi/v1.json
+    app.MapOpenApi("/openapi/{documentName}.yaml"); // => /openapi/v1.yaml
+}
 
 //await app.UseAppMiddlewareAndSeedDatabase();
 
